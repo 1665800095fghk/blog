@@ -1,5 +1,7 @@
-import '@/styles/globals.css'
+import App from 'next/app'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import '../static/styles/comm.css'
+import '../static/styles/Header.css'
+import '../static/styles/list.css'
+
+export default App
