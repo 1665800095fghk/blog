@@ -4,7 +4,9 @@ import {Row,Col,List} from 'antd'
 import {
   FormOutlined
 } from '@ant-design/icons'
+
 import Header from '../components/Header'
+import Author from "../components/Author";
 
 const mylist = [
   {title:'vivo50看实力',context:'芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，芜湖起飞，'},
@@ -51,7 +53,7 @@ const Lists = () => (
         />
       </Col>
       <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
-
+        <Author />
       </Col>
     </Row>
   </>
