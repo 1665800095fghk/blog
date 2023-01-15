@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import { Row, Col, Icon, Breadcrumb } from "antd";
+import { Row, Col, Breadcrumb, Affix } from "antd";
 import { FormOutlined } from "@ant-design/icons";
 import ReactMarkdown from "react-markdown";
+import MarkdownNavbar from "markdown-navbar";
 
 import Header from "@/components/Header";
 import Author from "@/components/Author";
@@ -93,7 +94,16 @@ const Detailed = () => {
           </div>
         </Col>
         <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
-          <Author />
+          <Affix offsetTop={5}>
+            <div className="detailed-nav comm-box">
+              <div className="nav-title">文章目录</div>
+              <MarkdownNavbar
+                className="article-menu"
+                source={markdown}
+                ordered={false}
+              />
+            </div>
+          </Affix>
         </Col>
       </Row>
       <Footer />

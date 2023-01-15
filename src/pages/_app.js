@@ -1,5 +1,6 @@
 import App from 'next/app'
 
+
 import '../static/styles/pages/comm.css'
 import '../static/styles/pages/detailed.css'
 

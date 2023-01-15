@@ -23,12 +23,6 @@ const Header = () => {
             <Menu.Item key="about">
               关于
             </Menu.Item>
-            <Menu.Item key="d1">
-              待定
-            </Menu.Item>
-            <Menu.Item key="d2">
-              待定
-            </Menu.Item>
           </Menu>
         </Col>
       </Row>
