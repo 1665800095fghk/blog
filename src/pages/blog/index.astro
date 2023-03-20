@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormateDate from "../../components/FormateDate.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout pageTitle="Blog">
+  <ul>
+    {
+      allPosts.map((post) => (
+        <li>
+          <FormateDate date={post.data.pubDate}></FormateDate>
+          <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
+<style>
+  ul {
+    list-style-type: none;
+    padding: unset;
+  }
+  ul li {
+    display: flex;
+  }
+  ul li :global(time) {
+    flex: 0 0 130px;
+    font-style: italic;
+    color: #595959;
+  }
+  ul li p {
+    margin: 0 10px;
+  }
+</style>
