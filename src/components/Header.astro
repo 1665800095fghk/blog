@@ -1,23 +1,51 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import config from '../config';
+import HeaderLink from "./HeaderLink.astro";
+import config from "../config";
 ---
 
-<header>
-	<h2>
-		{config.SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/tags">Tag</HeaderLink>
-	</nav>
+<header class="header">
+  <img
+    src="https://github.com/1665800095fghk/images/blob/main/logo.png?raw=true"
+    width="64"
+    style="margin-right: 10px;border-radius: 10px;"
+    alt=""
+  />
+  <nav>
+    <div class="left">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/tags">Tag</HeaderLink>
+    </div>
+    <div class="hr_line"></div>
+    <div class="right">
+      <HeaderLink
+        href="https://space.bilibili.com/170807657?spm_id_from=333.1007.0.0"
+        target="_blank"
+      >
+        Bilibili
+      </HeaderLink>
+      <HeaderLink href="https://github.com/1665800095fghk" target="_blank">
+        Github
+      </HeaderLink>
+    </div>
+  </nav>
 </header>
 <style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav {
+    height: 64px;
+  }
+  nav a {
+    margin: 10px 10px 10px 0  ;
+  }
+  .hr_line {
+    width: 3px;
+    height: 32px;
+    margin: 8px 10px 16px 0;
+    background: #555;
+  }
 </style>

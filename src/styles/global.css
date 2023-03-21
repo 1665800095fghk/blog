@@ -1,14 +1,18 @@
 body {
+	background-color: #333;
+	color: #ccc;
 	font-family: Verdana, sans-serif;
+}
+.body {
+	background: #363636;
+	min-height: 90vh;
 	margin: auto;
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #333;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #ccc;
 }
 h1,
 h2,
@@ -40,6 +44,10 @@ a:hover:after{
 }
 a:visited {
 	color: #eee !important;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
 }
 nav a {
 	margin-right: 10px;
