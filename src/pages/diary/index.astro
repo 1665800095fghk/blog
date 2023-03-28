@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormateDate from "../../components/FormateDate.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = (await getCollection("diary")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout pageTitle="Diary">
+  <ul>
+    {
+      allPosts.map((post) => (
+        <li class="container-rl">
+          <div class="left">
+            <FormateDate date={post.data.pubDate} />
+            <a href={`/diary/${post.slug}/`}>{post.data.title}</a>
+          </div>
+          <ul>
+            {Array.prototype.map.call(post.data.tags, (tag: String) => (
+              <li class="tag-item" style="float: left;">{tag}</li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
+<style>
+  ul {
+    list-style-type: none;
+    padding: unset;
+  }
+  ul li {
+    display: flex;
+  }
+  ul li :global(time) {
+    flex: 0 0 130px;
+    font-style: italic;
+    color: #595959;
+  }
+  ul li p {
+    margin: 0 10px;
+  }
+  .tag-item {
+    margin: 0 5px;
+  }
+  .container-rl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+</style>
