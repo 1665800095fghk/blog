@@ -1,10 +1,11 @@
 ---
-title: "青训-计算机网络"
+
+title: "青训-Linux"
 description: ""
 pubDate: "2023-4-14"
 updatedDate: "2023-4-14"
 tags: ["字节跳动青训", "Linux"]
---
+---
 
 ## 学习 Linux 的价值
 
@@ -241,10 +242,11 @@ touch index.js # 这次给了用户权限，文件创建成功
 
 - 软件包：软件包通常是指一个应用程序，它可以是一个 GUI 程序、命令行程序或软件库  
 - 软件包管理
-    - 底层工具：主要用于软件安装删除，dpkg，rpm
-    - 上层工具：主要用于数据的搜索任务和依赖解析任务，apt，yum，dnf
+  - 底层工具：主要用于软件安装删除，dpkg，rpm
+  - 上层工具：主要用于数据的搜索任务和依赖解析任务，apt，yum，dnf
 
 ### apt
+
 ```bash
 apt update # 列出所有可更新软件
 apt install <package_name> # 安装软件包

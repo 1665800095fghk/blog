@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import FormateDate from "../../components/FormateDate.astro";
 import { getCollection } from "astro:content";
+import FormateDate from "../../components/FormateDate.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const allPosts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -13,7 +13,7 @@ const allPosts = (await getCollection("blog")).sort(
     {
       allPosts.map((post) => (
         <li>
-          <FormateDate date={post.data.pubDate}></FormateDate>
+          <FormateDate date={post.data.pubDate} />
           <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
         </li>
       ))
@@ -29,7 +29,7 @@ const allPosts = (await getCollection("blog")).sort(
     display: flex;
   }
   ul li :global(time) {
-    flex: 0 0 130px;
+    flex: 0 0 150px;
     font-style: italic;
     color: #595959;
   }
