@@ -30,7 +30,7 @@ $ docker run --name mit6.s081 -itd linxi177229/mit6.s081:latest
 在镜像中，xv6源代码处于`/xv6-labs-2020`中，进入这个目录使用git命令切换到当前Lab的分支
 
 ```shell
-$ git checkout util (<span style="color: #0f0;">Easy</span>)
+$ git checkout util
 ```
 
 在项目根目录就可以对系统进行编译
