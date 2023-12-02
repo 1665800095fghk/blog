@@ -1,3 +1,11 @@
+---
+title: "Algorithm-Template"
+description: "记录算法竞赛用到的板子"
+pubDate: "2023-12-2"
+updatedDate: "2023-12-2"
+tags: ["algorithm"]
+---
+
 # Saleri的竞赛板子
 ## dfs
 基础dfs
